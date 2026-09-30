@@ -1,0 +1,410 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  background: #ffffff;
+  color: #222222;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.site-header {
+  background: #4169e1;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.site-header nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.site-header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero {
+  text-align: center;
+  background: #4169e1;
+  color: white;
+  padding: 3rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin: 0;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.student,
+.staff {
+  padding: 1.5rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.5rem;
+  background: #f7f7f7;
+}
+
+button {
+  background: #4169e1;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin: 0.25rem;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #3157c7;
+}
+
+.announcements {
+  margin-bottom: 2rem;
+}
+
+.announcements > h2 {
+  text-align: center;
+}
+
+.announcement-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.announcement {
+  border-left: 4px solid #ed2939;
+  background: #f2f2f2;
+  padding: 1rem;
+}
+
+.announcement h3 {
+  margin-top: 0;
+}
+
+footer {
+  background: #4169e1;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer span {
+  margin: 0 0.2rem;
+}
+
+/* Tablet */
+@media (min-width: 40rem) {
+      .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .unit-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .site-header nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .login-area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .announcement-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 64rem) {
+      .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .unit-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-form-section {
+    padding: 2rem;
+  }
+  main {
+    padding: 2rem;
+  }
+
+  .hero {
+    padding: 4rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .announcement-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Page headings */
+.page-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-heading h1 {
+  color: #4169e1;
+}
+
+/* Dashboard */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-card {
+  background: #f2f2f2;
+  border-left: 5px solid #4169e1;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.dashboard-card h2 {
+  margin-top: 0;
+}
+
+.big-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4169e1;
+  margin: 0.5rem 0;
+}
+
+.dashboard-section {
+  margin-bottom: 2rem;
+}
+
+.unit-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.5rem;
+}
+
+.timetable {
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.timetable p {
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 0.5rem;
+}
+
+/* Enrolment */
+.enrolment-section {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem;
+  border: 1px solid #aaa;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+.unit-options {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.unit-options label {
+  padding: 1rem;
+  background: #f2f2f2;
+  border: 1px solid #d3d3d3;
+  border-radius: 0.5rem;
+}
+
+/* Contact form */
+.contact-form-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.contact-form-section h1 {
+  text-align: center;
+  color: #4169e1;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label,
+.form-group legend {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #aaa;
+  border-radius: 0.3rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+fieldset.form-group {
+  border: 1px solid #d3d3d3;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+fieldset.form-group label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 1rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: normal;
+}
+
+.error {
+  color: #ed2939;
+  font-size: 0.9rem;
+  margin: 0.3rem 0 0;
+}
+
+.success {
+  background: #e8f5e9;
+  border: 1px solid #4caf50;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+/* Parent acknowledgement card */
+.acknowledgement-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f2f2f2;
+  border-left: 5px solid #4169e1;
+  border-radius: 0.5rem;
+}
+
+.acknowledgement-card h2 {
+  color: #4169e1;
+  margin-top: 0;
+}
+
+.acknowledgement-card p {
+  margin: 0.5rem 0;
+}
+.hero img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
